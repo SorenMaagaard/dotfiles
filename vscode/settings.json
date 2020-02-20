@@ -27,13 +27,12 @@
     "git.autofetch": true,
     "editor.minimap.enabled": false,
     "editor.mouseWheelZoom": true,
-    "workbench.colorTheme": "Cobalt2",
     "powershell.integratedConsole.showOnStartup": false,
     "workbench.editor.showTabs": false,
     "powershell.powerShellExePath": "C:\\Program Files\\PowerShell\\7-preview\\pwsh.exe",
     "workbench.sideBar.location": "left",
     "editor.renderFinalNewline": true,
-    "git.enableCommitSigning": true,
+    "git.enableCommitSigning": false,
     "[markdown]": {
         "files.trimTrailingWhitespace": false
     },
