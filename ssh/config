@@ -1,0 +1,5 @@
+Host git.3shape.local
+  IdentityFile ~/.ssh/threeshape_rsa
+
+Host github.com
+  IdentityFile ~/.ssh/github_rsa

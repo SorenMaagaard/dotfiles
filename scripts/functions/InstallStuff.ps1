@@ -16,5 +16,7 @@ function Ensure-ChocoPackages
   $installedPackages = &choco list --local-only --id-only -r
   $missing = $packages | ? {$_ -notin $installedPackages}
 
-  choco install $missing -y
+  if($missing){
+    choco install $missing -y
+  }
 }

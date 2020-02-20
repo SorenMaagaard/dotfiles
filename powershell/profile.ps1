@@ -107,7 +107,5 @@ $modules | Get-EnsureModule
 
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
-
-
 # clear variables
 Remove-Variable _PSVersion, _File, modules

@@ -1,0 +1,42 @@
+[help]
+  autocorrect = 1
+[core]
+  autocrlf = input
+  excludesfile = ~/.gitignore.global
+  editor = code --wait
+#[commit]
+#  gpgsign = true
+#[gpg]
+#	program = gpg
+#[tag]
+#	forceSignAnnotated = true
+[pull]
+  rebase = true
+[push]
+  default = current
+  followTags = true
+[fetch]
+  prune = true
+[branch]
+  autosetupmerge = always
+  autosetuprebase = always
+[remote "origin"]
+  fetch = +refs/pr/*/head:refs/remotes/origin/pr/*
+[include]
+  path = .gitconfig.local
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+[url "git@github.com:"]
+  insteadOf = https://github.com/
+[url "ssh://git@gitlab.com/"]
+  insteadOf = https://gitlab.com/
+[user]
+	name = Søren Maagaard
+	email = maagaard100@gmail.com
+[includeIf "gitdir/i:C:/git/work/"]
+  path = .gitconfig.work
+[includeIf "gitdir/i:C:/git/personal/"]
+  path = .gitconfig.personal

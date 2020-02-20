@@ -1,10 +1,3 @@
-function Set-SymLinkFile{
-  param(
-    [string] $source, [string]$link
-    )
-    New-Item -Force -ItemType SymbolicLink -Target $source -Path $link #| Out-Null";
-}
-
 function Set-DotFile{
   param(
     [string] $source, [string]$dest, [switch]$addDot
@@ -21,10 +14,17 @@ function Set-DotFile{
         Remove-Item $link -Force
     }
 
-    SymLinkFile -source $sourceAbsolute -link $link
+    New-Item -Force -ItemType SymbolicLink -Target $sourceAbsolute -Path $link #| Out-Null";
 }
 
-function Set-SymLinkPsProfile([string] $source){
+function Set-SymLinkProfile([string] $source){
      $sourceAbsolute = Resolve-Path $source;
-     SymLinkFile $sourceAbsolute $profile
+     New-Item -Force -ItemType SymbolicLink -Target $sourceAbsolute -Path $profile #| Out-Null";
+     Write-host "Profile = $profile"
+}
+
+
+function Set-SymLinkProcessProfile([string]$process, [string] $source){
+  Write-host "Setting symlink profile for $process"
+  &$process -WindowStyle Hidden -NonInteractive -Command ${function:Set-SymLinkProfile} -args $source
 }
