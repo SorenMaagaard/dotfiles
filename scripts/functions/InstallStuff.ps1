@@ -1,4 +1,4 @@
-function Ensure-ChocoPackages
+function Install-ChocoPackages
 {
   param (
     [string[]]$packages

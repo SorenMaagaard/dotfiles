@@ -5,7 +5,7 @@ $PersonalPackages = "spotify","nordvpn"
 Import-Module ".\scripts\DotFilesSetup" -Force
 
 #install tools
-Ensure-ChocoPackages @($WorkPackages + $PersonalPackages)
+Install-ChocoPackages @($WorkPackages + $PersonalPackages)
 
 #vscode
 Set-DotFile ".\vscode\settings.json" "$($env:APPDATA)\Code\User"
@@ -21,5 +21,4 @@ Set-DotFile ".\git\gitconfig.work" "~" -addDot
 Set-DotFile ".\git\gitignore.global" "~" -addDot
 
 Set-DotFile ".\ssh\config" "~\.ssh"
-
 Set-DotFile ".\terminal\profiles.json" "$($env:LOCALAPPDATA)\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
