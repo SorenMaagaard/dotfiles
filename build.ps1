@@ -21,3 +21,5 @@ Set-DotFile ".\git\gitconfig.work" "~" -addDot
 Set-DotFile ".\git\gitignore.global" "~" -addDot
 
 Set-DotFile ".\ssh\config" "~\.ssh"
+
+Set-DotFile ".\terminal\profiles.json" "$($env:LOCALAPPDATA)\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
