@@ -107,5 +107,12 @@ $modules | Get-EnsureModule
 
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
+# setup oh-my-posh
+Set-Theme paradox
+
+$developmentWorkspace = @("C:\git\personal", "C:\git\work")
+# setup cd extras
+$cde.CD_PATH = @($developmentWorkspace)
+
 # clear variables
 Remove-Variable _PSVersion, _File, modules
