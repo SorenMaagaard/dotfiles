@@ -2,3 +2,6 @@
 	email = soeren.maagaard@3shape.com
 [url "git@git.3shape.local:"]
   insteadOf = https://git.3shape.local/
+[http "https://artifactorydk"]
+  sslCAInfo = http://certificates.devops.3shape.local/allCertsFor3Shape.pem
+  sslCAPath =http://certificates.devops.3shape.local/
