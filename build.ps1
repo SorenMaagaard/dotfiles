@@ -22,3 +22,6 @@ Set-DotFile ".\git\gitignore.global" "~" -addDot
 
 Set-DotFile ".\ssh\config" "~\.ssh"
 Set-DotFile ".\terminal\profiles.json" "$($env:LOCALAPPDATA)\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState"
+
+#wsl2
+Set-Dotfile ".\wsl\wslconfig" "~" -addDot
