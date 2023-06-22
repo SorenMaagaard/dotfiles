@@ -1,5 +1,5 @@
 #chocolatey packages to install
-$WorkPackages = "vscode","git","7zip","slack","teamviewer","pwsh","firacode-ttf"
+$WorkPackages = "vscode","git","7zip","slack","teamviewer","pwsh","firacode-ttf","oh-my-posh"
 $PersonalPackages = "spotify","nordvpn"
 
 Import-Module ".\scripts\DotFilesSetup" -Force

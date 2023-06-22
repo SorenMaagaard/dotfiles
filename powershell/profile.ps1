@@ -90,7 +90,6 @@ $modules = (
   "Get-ChildItemColor",
   "DockerCompletion",
   "posh-git",
-  "oh-my-posh",
   "PSReadLine",
   "cd-extras"
 )
@@ -108,7 +107,7 @@ $modules | Get-EnsureModule
 Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
 
 # setup oh-my-posh
-Set-Theme paradox
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\paradox.omp.json" | Invoke-Expression
 
 $developmentWorkspace = @("C:\git\personal", "C:\git\work")
 # setup cd extras
